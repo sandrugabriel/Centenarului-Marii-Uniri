@@ -105,7 +105,7 @@ namespace Centenarului_Marii_Uniri.Panels
             this.lblTitlu.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblTitlu.Name = "lblTitlu";
             this.lblTitlu.Size = new System.Drawing.Size(509, 39);
-            this.lblTitlu.Text = "Am uitat parola la adresa de email : ";
+            this.lblTitlu.Text = "Am uitat parola la adresa de email : " + email;
 
             // btnVerificare
             this.btnVerificare.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 17.8F);
