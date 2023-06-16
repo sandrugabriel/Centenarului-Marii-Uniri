@@ -42,7 +42,12 @@ namespace Centenarului_Marii_Uniri.Controllers
             streamReader.Close();
         }
 
+        public List<Lectie> getLectii()
+        {
 
+            return lectii;
+
+        }
 
     }
 }

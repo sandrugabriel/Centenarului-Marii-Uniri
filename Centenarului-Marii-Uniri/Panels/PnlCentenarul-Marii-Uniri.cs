@@ -19,7 +19,7 @@ namespace Centenarului_Marii_Uniri.Panels
         public PnlCentenarul_Marii_Uniri(Form1 form1)
         {
 
-            form1 = form;
+            form = form1;
 
             this.form.Size = new System.Drawing.Size(555, 458);
             this.form.MinimumSize = new System.Drawing.Size(555, 458);
@@ -67,7 +67,7 @@ namespace Centenarului_Marii_Uniri.Panels
         {
 
             this.form.removepnl("pnlCentenarulMariiUnirii");
-
+            this.form.Controls.Add(new PnlVizualizare(this.form));
 
         }
 

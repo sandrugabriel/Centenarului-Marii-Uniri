@@ -14,6 +14,11 @@ namespace Centenarului_Marii_Uniri.Models
         private string parola;
         private string email;
 
+        public Utilizator()
+        {
+
+        }
+
         public Utilizator(int id, string name, string parola, string email)
         {
             this.id = id;

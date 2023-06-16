@@ -13,17 +13,22 @@ namespace Centenarului_Marii_Uniri.Models
         private int idUtilizator;
         private string titlu;
         private string regiune;
-        private DateTime dataCreare;
         private string numeImagine;
+        private DateTime dataCreare;
 
-        public Lectie(int id, int idUtilizator, string titlu, string regiune, DateTime dataCreare, string numeImagine)
+        public Lectie()
+        {
+
+        }
+
+        public Lectie(int id, int idUtilizator, string titlu, string regiune,string numeImagine, DateTime dataCreare)
         {
             this.id = id;
             this.idUtilizator = idUtilizator;
             this.titlu = titlu;
             this.regiune = regiune;
-            this.dataCreare = dataCreare;
             this.numeImagine = numeImagine;
+            this.dataCreare = dataCreare;
         }
 
         public Lectie(string text)
@@ -35,8 +40,8 @@ namespace Centenarului_Marii_Uniri.Models
             this.idUtilizator = int.Parse(prop[1]);
             this.titlu = prop[2];
             this.regiune = prop[3];
-            this.dataCreare = DateTime.Parse(prop[4]);
-            this.numeImagine = prop[5];
+            this.numeImagine = prop[4];
+            this.dataCreare = DateTime.Parse(prop[5]);
 
         }
 

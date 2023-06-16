@@ -42,6 +42,10 @@ namespace Centenarului_Marii_Uniri.Controllers
             streamReader.Close();
         }
 
+        public List<Utilizator> getUtilizatori()
+        {
+            return utilizatori;
+        }
 
     }
 }
