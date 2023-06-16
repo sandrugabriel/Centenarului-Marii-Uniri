@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Centenarului_Marii_Uniri.Panels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,9 @@ namespace Centenarului_Marii_Uniri
         public Form1()
         {
             InitializeComponent();
+
+            this.Controls.Add(new PnlCentenarul_Marii_Uniri(this));
+
         }
 
         public void removepnl(string pnl)

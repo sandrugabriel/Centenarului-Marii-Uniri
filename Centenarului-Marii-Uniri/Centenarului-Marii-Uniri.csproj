@@ -60,9 +60,18 @@
     <Compile Include="Mockups\MockupCentenarulMariiUnirii.Designer.cs">
       <DependentUpon>MockupCentenarulMariiUnirii.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mockups\MockupVizualizare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mockups\MockupVizualizare.Designer.cs">
+      <DependentUpon>MockupVizualizare.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Lectie.cs" />
     <Compile Include="Models\Utilizator.cs" />
     <Compile Include="Panels\PnlCentenarul-Marii-Uniri.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Panels\PnlVizualizare.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
@@ -72,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mockups\MockupCentenarulMariiUnirii.resx">
       <DependentUpon>MockupCentenarulMariiUnirii.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mockups\MockupVizualizare.resx">
+      <DependentUpon>MockupVizualizare.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
