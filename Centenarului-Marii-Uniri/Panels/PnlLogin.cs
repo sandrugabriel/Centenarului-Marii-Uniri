@@ -138,7 +138,7 @@ namespace Centenarului_Marii_Uniri.Panels
                     Utilizator utilizator = new Utilizator();
                     utilizator = controllerUtilizatori.UtilizatorByEmailParola(txtEmail.Text, txtParola.Text);
                     this.form.removepnl("PnlLogin");
-
+                    this.form.Controls.Add(new PnlStart(form, utilizator));
 
                 }
                 else MessageBox.Show("Emailul/Parola sunt gresite!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
