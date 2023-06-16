@@ -122,5 +122,24 @@ namespace Centenarului_Marii_Uniri.Controllers
 
         }
 
+        public bool verificareEmail(string email)
+        {
+
+            for (int i = 0; i < utilizatori.Count; i++)
+            {
+
+                if (utilizatori[i].getEmail().Equals(email))
+                {
+
+                    return true;
+
+                }
+
+            }
+
+            return false;
+        }
+
+
     }
 }

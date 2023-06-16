@@ -60,11 +60,11 @@
     <Compile Include="Mockups\MockupCentenarulMariiUnirii.Designer.cs">
       <DependentUpon>MockupCentenarulMariiUnirii.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mockups\MockupLogin.cs">
+    <Compile Include="Mockups\MockupResetareParola.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mockups\MockupLogin.Designer.cs">
-      <DependentUpon>MockupLogin.cs</DependentUpon>
+    <Compile Include="Mockups\MockupResetareParola.Designer.cs">
+      <DependentUpon>MockupResetareParola.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Lectie.cs" />
     <Compile Include="Models\Utilizator.cs" />
@@ -72,6 +72,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Panels\PnlLogin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Panels\PnlResetareParola.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Panels\PnlVizualizare.cs">
@@ -85,8 +88,8 @@
     <EmbeddedResource Include="Mockups\MockupCentenarulMariiUnirii.resx">
       <DependentUpon>MockupCentenarulMariiUnirii.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mockups\MockupLogin.resx">
-      <DependentUpon>MockupLogin.cs</DependentUpon>
+    <EmbeddedResource Include="Mockups\MockupResetareParola.resx">
+      <DependentUpon>MockupResetareParola.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
