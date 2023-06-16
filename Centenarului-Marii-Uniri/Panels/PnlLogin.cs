@@ -20,7 +20,6 @@ namespace Centenarului_Marii_Uniri.Panels
         Label lblParola;
         Button btnBack;
         LinkLabel linkParola;
-
         Form1 form;
 
         ControllerUtilizatori controllerUtilizatori;
@@ -30,16 +29,18 @@ namespace Centenarului_Marii_Uniri.Panels
 
             form = form1;
 
-            this.form.Size = new System.Drawing.Size(530, 570);
-            this.form.MinimumSize = new System.Drawing.Size(530, 570);
-            this.form.MaximumSize = new System.Drawing.Size(530, 570);
+            this.form.Size = new System.Drawing.Size(530, 580);
+            this.form.MinimumSize = new System.Drawing.Size(530, 580);
+            this.form.MaximumSize = new System.Drawing.Size(530, 580); 
+            this.form.Location = new System.Drawing.Point(260, 5);
 
             controllerUtilizatori = new ControllerUtilizatori();
 
             //PnlLogin
-            this.Size = new System.Drawing.Size(530, 570);
+            this.Size = new System.Drawing.Size(530, 580);
             this.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 13.8F, System.Drawing.FontStyle.Regular);
             this.Name = "PnlLogin";
+            this.AutoScroll = true;
 
             this.lblTitlu = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -58,6 +59,7 @@ namespace Centenarului_Marii_Uniri.Panels
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lblTitlu);
+
 
             // lblTitlu
             this.lblTitlu.AutoSize = true;
@@ -148,8 +150,20 @@ namespace Centenarului_Marii_Uniri.Panels
 
         private void linkParola_Click(object sender, EventArgs e)
         {
+            if (!txtEmail.Text.Equals(""))
+            {
+                if (controllerUtilizatori.verificareEmail(txtEmail.Text))
+                {
+                    this.form.removepnl("PnlLogin");
+                    this.form.Controls.Add(new PnlResetareParola(form, txtEmail.Text));
+                }
+                else MessageBox.Show("Emaiul este gresit!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            this.form.removepnl("PnlLogin");
+
+
+            }
+            else MessageBox.Show("Introduceti emailul!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
 
         }
 
