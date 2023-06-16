@@ -58,5 +58,16 @@ namespace Centenarului_Marii_Uniri.Models
             return email;
         }
 
+        public void setParola(string parola)
+        {
+            this.parola = parola;
+        }
+
+        public string toSave()
+        {
+
+            return id.ToString() + "*" + name + "*" + parola + "*" + email;
+        }
+
     }
 }

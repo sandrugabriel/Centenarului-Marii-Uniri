@@ -47,5 +47,80 @@ namespace Centenarului_Marii_Uniri.Controllers
             return utilizatori;
         }
 
+        public bool verificare(string email, string parola)
+        {
+
+            for(int i=0;i<utilizatori.Count;i++)
+            {
+
+                if (utilizatori[i].getEmail().Equals(email) && utilizatori[i].getParola().Equals(parola)) {
+
+                    return true;
+                
+                }
+
+            }
+
+            return false;
+        }
+
+        public Utilizator UtilizatorByEmailParola(string email, string parola)
+        {
+
+            for (int i = 0; i < utilizatori.Count; i++)
+            {
+
+                if (utilizatori[i].getEmail().Equals(email) && utilizatori[i].getParola().Equals(parola))
+                {
+
+                    return utilizatori[i];
+
+                }
+
+            }
+
+            return null;
+
+        }
+
+        public string toFisier()
+        {
+
+            string text = "";
+
+            for (int i = 0; i < utilizatori.Count; i++)
+            {
+                text += utilizatori[i].toSave() + "\n";
+            }
+
+            return text;
+        }
+
+        public void update()
+        {
+
+            String path = Application.StartupPath + @"/data/utilizatori.txt";
+            StreamWriter streamWriter = new StreamWriter(path);
+
+            streamWriter.Write(this.toFisier());
+
+            streamWriter.Close();
+
+        }
+
+        public void setParolabyEmail(string email, string parola)
+        {
+
+            for(int i=0;i<utilizatori.Count;i++)
+            {
+                if (utilizatori[i].getEmail().Equals(email))
+                {
+                    utilizatori[i].setParola(parola);
+                    break;
+                }
+            }
+
+        }
+
     }
 }
