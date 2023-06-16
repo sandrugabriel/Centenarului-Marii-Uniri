@@ -19,6 +19,7 @@ namespace Centenarului_Marii_Uniri.Panels
         Label lblTitlu;
         RichTextBox richtTextUtilizator;
         ComboBox cmbLectii;
+        Button btnBack;
         Label lblSubTitlu;
         PictureBox pctImg;
 
@@ -44,19 +45,20 @@ namespace Centenarului_Marii_Uniri.Panels
             utilizatorii = new List<Utilizator>();
             utilizatorii = controllerUtilizatori.getUtilizatori();
 
-            // MockupVizualizare
+            //PnlVizualizare
             this.Size = new System.Drawing.Size(1180, 782);
-            this.Name = "MockupVizualizare";
-            this.Text = "MockupVizualizare";
+            this.Name = "PnlVizualizare";
 
             this.lblTitlu = new System.Windows.Forms.Label();
             this.richtTextUtilizator = new System.Windows.Forms.RichTextBox();
             this.cmbLectii = new System.Windows.Forms.ComboBox();
+            this.btnBack = new System.Windows.Forms.Button();
             this.lblSubTitlu = new System.Windows.Forms.Label();
             this.pctImg = new System.Windows.Forms.PictureBox();
 
             this.Controls.Add(this.pctImg);
             this.Controls.Add(this.lblSubTitlu);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.cmbLectii);
             this.Controls.Add(this.richtTextUtilizator);
             this.Controls.Add(this.lblTitlu);
@@ -87,6 +89,14 @@ namespace Centenarului_Marii_Uniri.Panels
                 this.cmbLectii.Items.Add(lectii[i].getNumeImagine());
             }
             this.cmbLectii.SelectedIndexChanged += new EventHandler(cmbLectii_SelectedIndexChanged);
+
+            // btnAfisare
+            this.btnBack.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(64, 649);
+            this.btnBack.Name = "btnAfisare";
+            this.btnBack.Size = new System.Drawing.Size(136, 57);
+            this.btnBack.Text = "Back";
+            this.btnBack.Click += new EventHandler(btnBack_Click);
              
             // lblSubTitlu
             this.lblSubTitlu.AutoSize = true;
@@ -146,6 +156,12 @@ namespace Centenarului_Marii_Uniri.Panels
 
         }
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+
+            this.form.removepnl("PnlVizualizare");
+            this.form.Controls.Add(new PnlCentenarul_Marii_Uniri(form));
+        }
 
     }
 }

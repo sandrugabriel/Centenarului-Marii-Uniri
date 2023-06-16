@@ -75,7 +75,7 @@ namespace Centenarului_Marii_Uniri.Panels
         {
 
             this.form.removepnl("pnlCentenarulMariiUnirii");
-
+            this.form.Controls.Add(new PnlLogin(this.form));
 
         }
 
