@@ -1,4 +1,5 @@
-﻿using Centenarului_Marii_Uniri.Panels;
+﻿using Centenarului_Marii_Uniri.Models;
+using Centenarului_Marii_Uniri.Panels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,8 +17,8 @@ namespace Centenarului_Marii_Uniri
         public Form1()
         {
             InitializeComponent();
-
-            this.Controls.Add(new PnlCentenarul_Marii_Uniri(this));
+            Utilizator utilizator = new Utilizator("1*Popescu Ion*1234*popescu@gmail.com");
+            this.Controls.Add(new PnlGhiceste(this,utilizator));
 
         }
 

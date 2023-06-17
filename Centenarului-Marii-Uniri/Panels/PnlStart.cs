@@ -84,7 +84,7 @@ namespace Centenarului_Marii_Uniri.Panels
         {
 
             this.form.removepnl("PnlStart");
-
+            this.form.Controls.Add(new PnlCreare(form, utilizator));
 
         }
 
@@ -92,7 +92,7 @@ namespace Centenarului_Marii_Uniri.Panels
         {
 
             this.form.removepnl("PnlStart");
-
+            this.form.Controls.Add(new PnlGhiceste(form, utilizator));
 
         }
 
