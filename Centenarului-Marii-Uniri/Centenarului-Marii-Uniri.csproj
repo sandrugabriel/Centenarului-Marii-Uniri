@@ -60,11 +60,11 @@
     <Compile Include="Mockups\MockupCentenarulMariiUnirii.Designer.cs">
       <DependentUpon>MockupCentenarulMariiUnirii.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mockups\MockupGhiceste.cs">
+    <Compile Include="Mockups\MockupDiploma.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mockups\MockupGhiceste.Designer.cs">
-      <DependentUpon>MockupGhiceste.cs</DependentUpon>
+    <Compile Include="Mockups\MockupDiploma.Designer.cs">
+      <DependentUpon>MockupDiploma.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Lectie.cs" />
     <Compile Include="Models\Utilizator.cs" />
@@ -72,6 +72,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Panels\PnlCreare.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Panels\PnlDiploma.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Panels\PnlGhiceste.cs">
@@ -97,8 +100,8 @@
     <EmbeddedResource Include="Mockups\MockupCentenarulMariiUnirii.resx">
       <DependentUpon>MockupCentenarulMariiUnirii.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mockups\MockupGhiceste.resx">
-      <DependentUpon>MockupGhiceste.cs</DependentUpon>
+    <EmbeddedResource Include="Mockups\MockupDiploma.resx">
+      <DependentUpon>MockupDiploma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
