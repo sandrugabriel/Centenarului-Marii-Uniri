@@ -76,7 +76,7 @@ namespace Centenarului_Marii_Uniri.Panels
             if (nota == 10) t += "  Premiul I";
             else if (nota == 9) t += "  Premiul II";
             else if (nota == 8) t += "  Premiul III";
-            else if (nota <= 7) t += "  Mentiune";
+            else if (nota <= 7 && nota>=5) t += "  Mentiune";
             else t += " Diploma de participre";
             this.lblelev.Text = t;
              
