@@ -76,6 +76,7 @@ namespace Centenarului_Marii_Uniri.Panels
             this.btnGenereaza.Size = new System.Drawing.Size(182, 80);
             this.btnGenereaza.Text = "Genereaza Diploma";
             this.btnGenereaza.Visible = false;
+            this.btnGenereaza.Click += new EventHandler(btnGenereaza_Click);
              
             // btnStart
             this.btnStart.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 14.8F);
@@ -95,6 +96,7 @@ namespace Centenarului_Marii_Uniri.Panels
             this.btnRaspunde.TabIndex = 31;
             this.btnRaspunde.Text = "Raspunde";
             this.btnRaspunde.Visible = false;
+            this.btnRaspunde.Click += new EventHandler(btnRaspunde_Click);
              
             // pctHarta
             this.pctHarta.BackColor = System.Drawing.Color.LightBlue;
@@ -204,7 +206,23 @@ namespace Centenarului_Marii_Uniri.Panels
         private void btnStart_Click(object sender, EventArgs e)
         {
             this.btnStart.Enabled = false;
+            this.btnRaspunde.Visible = true;
+            this.btnGenereaza.Visible = true;
         }
+
+        private void btnRaspunde_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void btnGenereaza_Click(object sender, EventArgs e)
+        {
+
+            this.form.removepnl("PnlGhiceste");
+            this.form.Controls.Add(new PnlDiploma(form,int.Parse(txtNota.Text), utilizator));
+        }
+
 
     }
 }

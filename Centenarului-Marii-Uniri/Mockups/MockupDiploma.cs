@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Centenarului_Marii_Uniri.Mockups
 {
-    public partial class MockupGhiceste : Form
+    public partial class MockupDiploma : Form
     {
-        public MockupGhiceste()
+        public MockupDiploma()
         {
             InitializeComponent();
         }
