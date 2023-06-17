@@ -24,12 +24,14 @@ namespace Centenarului_Marii_Uniri.Panels
         Button btnRaspunde;
         PictureBox pctHarta;
 
+        List<TextBox> txtList;
+
         public PnlGhiceste(Form1 form1,  Utilizator utilizator1)
         {
 
             this.form = form1;
             this.utilizator = utilizator1;
-
+            txtList = new List<TextBox>();
             this.form.Size = new System.Drawing.Size(1278, 584);
             this.form.MaximumSize = new System.Drawing.Size(1278, 584);
             this.form.MinimumSize = new System.Drawing.Size(1278, 584);
@@ -81,7 +83,6 @@ namespace Centenarului_Marii_Uniri.Panels
             // btnStart
             this.btnStart.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 14.8F);
             this.btnStart.Location = new System.Drawing.Point(1028, 102);
-            this.btnStart.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(153, 60);
             this.btnStart.Text = "Start";
@@ -104,7 +105,7 @@ namespace Centenarului_Marii_Uniri.Panels
             this.pctHarta.Name = "pctHarta";
             this.pctHarta.Size = new System.Drawing.Size(851, 560);
             this.pctHarta.Paint += new PaintEventHandler(pctHarta_Paint);
-
+            this.pctHarta.Visible = false;
         }
 
         private void pctHarta_Paint(object sender, PaintEventArgs e)
@@ -112,9 +113,10 @@ namespace Centenarului_Marii_Uniri.Panels
             Graphics g = e.Graphics;
             conturHarta(g);
 
-          //  regiuni(g);
+            regiuni(g);
 
         }
+
         private void regiuni(Graphics g)
         {
             List<string> nameFisier = new List<string>();
@@ -149,8 +151,9 @@ namespace Centenarului_Marii_Uniri.Panels
 
                         TextBox textBox = new TextBox();
                         textBox.Name = prop[2];
-                        this.pctHarta.Controls.Add(textBox);
                         textBox.Location = new Point(x, y);
+                        this.pctHarta.Controls.Add(textBox);
+                        txtList.Add(textBox);
                         ct++;
                     }
                     else
@@ -205,15 +208,24 @@ namespace Centenarului_Marii_Uniri.Panels
 
         private void btnStart_Click(object sender, EventArgs e)
         {
+            this.pctHarta.Visible = true;
             this.btnStart.Enabled = false;
             this.btnRaspunde.Visible = true;
-            this.btnGenereaza.Visible = true;
         }
 
         private void btnRaspunde_Click(object sender, EventArgs e)
         {
+            int nota = 10;
+            MessageBox.Show(txtList.Count.ToString());
+            for(int i = 0; i < txtList.Count; i++)
+            {
 
+                if (txtList[i].Text != txtList[i].Name) nota--;
 
+            }
+
+            txtNota.Text = nota.ToString();
+            this.btnGenereaza.Visible = true;
         }
 
         private void btnGenereaza_Click(object sender, EventArgs e)
