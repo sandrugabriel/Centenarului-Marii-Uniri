@@ -15,6 +15,7 @@ namespace Centenarului_Marii_Uniri.Panels
         Label label1;
         Button btnVizualizare;
         Button btnLogare;
+        PictureBox pictureBox1;
 
         public PnlCentenarul_Marii_Uniri(Form1 form1)
         {
@@ -32,10 +33,16 @@ namespace Centenarului_Marii_Uniri.Panels
             this.label1 = new System.Windows.Forms.Label();
             this.btnVizualizare = new System.Windows.Forms.Button();
             this.btnLogare = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
 
             this.Controls.Add(this.btnLogare);
             this.Controls.Add(this.btnVizualizare);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
+
+            //picturebox1
+            this.pictureBox1.Size = new System.Drawing.Size(560,100);
+            this.pictureBox1.BackColor = System.Drawing.ColorTranslator.FromHtml("#5F7ADB");
 
             // label1
             this.label1.AutoSize = true;
@@ -44,7 +51,9 @@ namespace Centenarului_Marii_Uniri.Panels
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(260, 48);
             this.label1.Text = "Centenar Start";
-             
+            this.label1.BackColor = System.Drawing.ColorTranslator.FromHtml("#5F7ADB");
+            this.label1.ForeColor = System.Drawing.Color.White;
+
             // btnVizualizare
             this.btnVizualizare.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 14.2F);
             this.btnVizualizare.Location = new System.Drawing.Point(155, 166);
@@ -52,7 +61,9 @@ namespace Centenarului_Marii_Uniri.Panels
             this.btnVizualizare.Size = new System.Drawing.Size(224, 75);
             this.btnVizualizare.Text = "Vizualizare lectii";
             this.btnVizualizare.Click += new EventHandler(btnVizualizare_Click);
-             
+            this.btnVizualizare.BackColor = System.Drawing.ColorTranslator.FromHtml("#5F7ADB");
+            this.btnVizualizare.ForeColor = System.Drawing.Color.White;
+
             // btnLogare
             this.btnLogare.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 14.2F);
             this.btnLogare.Location = new System.Drawing.Point(155, 287);
@@ -60,6 +71,8 @@ namespace Centenarului_Marii_Uniri.Panels
             this.btnLogare.Size = new System.Drawing.Size(224, 75);
             this.btnLogare.Text = "Logare utilizator";
             this.btnLogare.Click += new EventHandler(btnLogare_Click);
+            this.btnLogare.BackColor = System.Drawing.ColorTranslator.FromHtml("#5F7ADB");
+            this.btnLogare.ForeColor = System.Drawing.Color.White;
 
         }
 

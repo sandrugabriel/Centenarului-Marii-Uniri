@@ -22,6 +22,7 @@ namespace Centenarului_Marii_Uniri.Panels
         Button btnBack;
         Label lblSubTitlu;
         PictureBox pctImg;
+        PictureBox pictureBox;
 
         ControllerLectii controllerLectii;
         List<Lectie> lectii;
@@ -55,6 +56,7 @@ namespace Centenarului_Marii_Uniri.Panels
             this.btnBack = new System.Windows.Forms.Button();
             this.lblSubTitlu = new System.Windows.Forms.Label();
             this.pctImg = new System.Windows.Forms.PictureBox();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
 
             this.Controls.Add(this.pctImg);
             this.Controls.Add(this.lblSubTitlu);
@@ -62,6 +64,11 @@ namespace Centenarului_Marii_Uniri.Panels
             this.Controls.Add(this.cmbLectii);
             this.Controls.Add(this.richtTextUtilizator);
             this.Controls.Add(this.lblTitlu);
+            this.Controls.Add(pictureBox);
+
+            //picturebox
+            this.pictureBox.Size = new Size(1185,85);
+            this.pictureBox.BackColor = System.Drawing.ColorTranslator.FromHtml("#5F7ADB");
 
             // lblTitlu
             this.lblTitlu.AutoSize = true;
@@ -71,7 +78,9 @@ namespace Centenarului_Marii_Uniri.Panels
             this.lblTitlu.Size = new System.Drawing.Size(698, 60);
             this.lblTitlu.Text = "Centenarul Marii Uniri de la 1918 - aceasta platforma este dedicata\r\naprofundarii" +
             " cunostintelor despre regiunile Marii Uniri de la 1918\r\n";
-             
+            this.lblTitlu.BackColor = System.Drawing.ColorTranslator.FromHtml("#5F7ADB");
+            this.lblTitlu.ForeColor = Color.White;
+
             // richtTextUtilizator
             this.richtTextUtilizator.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richtTextUtilizator.Location = new System.Drawing.Point(447, 540);
@@ -89,15 +98,18 @@ namespace Centenarului_Marii_Uniri.Panels
                 this.cmbLectii.Items.Add(lectii[i].getNumeImagine());
             }
             this.cmbLectii.SelectedIndexChanged += new EventHandler(cmbLectii_SelectedIndexChanged);
+            this.cmbLectii.SelectedIndex = 0;
 
-            // btnAfisare
+            // btnBack
             this.btnBack.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.Location = new System.Drawing.Point(64, 649);
             this.btnBack.Name = "btnAfisare";
             this.btnBack.Size = new System.Drawing.Size(136, 57);
             this.btnBack.Text = "Back";
             this.btnBack.Click += new EventHandler(btnBack_Click);
-             
+            this.btnBack.BackColor = System.Drawing.ColorTranslator.FromHtml("#5F7ADB");
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+
             // lblSubTitlu
             this.lblSubTitlu.AutoSize = true;
             this.lblSubTitlu.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -112,6 +124,8 @@ namespace Centenarului_Marii_Uniri.Panels
             this.pctImg.Size = new System.Drawing.Size(800, 420);
             this.pctImg.BackColor = Color.Gray;
             this.pctImg.SizeMode = PictureBoxSizeMode.StretchImage;
+            this.pctImg.BackColor = System.Drawing.ColorTranslator.FromHtml("#5F7ADB");
+
 
         }
 

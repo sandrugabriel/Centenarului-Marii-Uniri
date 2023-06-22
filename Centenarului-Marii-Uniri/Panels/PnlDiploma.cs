@@ -56,22 +56,26 @@ namespace Centenarului_Marii_Uniri.Panels
             this.btnBack.Size = new System.Drawing.Size(153, 60);
             this.btnBack.Text = "Back";
             this.btnBack.Click += new EventHandler(btnBack_Click);
-             
+            this.btnBack.BackColor = System.Drawing.ColorTranslator.FromHtml("#5F7ADB");
+            this.btnBack.ForeColor = Color.White;
+
             // pctdipl
             this.pctdipl.BackColor = System.Drawing.SystemColors.Info;
             this.pctdipl.Location = new System.Drawing.Point(67, 184);
             this.pctdipl.Name = "pctdipl";
             this.pctdipl.Size = new System.Drawing.Size(188, 246);
             this.pctdipl.Image = Image.FromFile(Application.StartupPath + @"/sigiliu.jpg");
-            this.pctdipl.SizeMode = PictureBoxSizeMode.StretchImage;
-             
+            this.pctdipl.SizeMode = PictureBoxSizeMode.StretchImage; 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Info;
+
+
             // lblelev
             this.lblelev.AutoSize = true;
             this.lblelev.BackColor = System.Drawing.SystemColors.Info;
             this.lblelev.Location = new System.Drawing.Point(349, 369);
             this.lblelev.Name = "lblelev";
             this.lblelev.Size = new System.Drawing.Size(332, 30);
-
+            this.lblelev.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 15.8F, System.Drawing.FontStyle.Regular);
             string t = "Se acorda elevului " + utilizator.getName();
             if (nota == 10) t += "  Premiul I";
             else if (nota == 9) t += "  Premiul II";
@@ -83,7 +87,7 @@ namespace Centenarului_Marii_Uniri.Panels
             // lblTitlu
             this.lblTitlu.AutoSize = true;
             this.lblTitlu.BackColor = System.Drawing.SystemColors.Info;
-            this.lblTitlu.Font = new System.Drawing.Font("Segoe Print", 52F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.lblTitlu.Font = new System.Drawing.Font("Segoe Print", 60F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblTitlu.ForeColor = System.Drawing.Color.Red;
             this.lblTitlu.Location = new System.Drawing.Point(328, 73);
             this.lblTitlu.Name = "lblTitlu";

@@ -17,6 +17,9 @@ namespace Centenarului_Marii_Uniri.Panels
         Form1 form;
         Utilizator utilizator;
 
+        Label lblTitlu;
+        PictureBox pictureBox;
+
         Button btnBack;
         PictureBox pctHarta;
 
@@ -29,33 +32,48 @@ namespace Centenarului_Marii_Uniri.Panels
             this.utilizator = utilizator1;
             pointRegiuni = new List<Point>();
 
-            this.form.Size = new System.Drawing.Size(1278, 584);
-            this.form.MaximumSize = new System.Drawing.Size(1278, 584);
-            this.form.MinimumSize = new System.Drawing.Size(1278, 584);
+            this.form.Size = new System.Drawing.Size(1278, 635);
+            this.form.MaximumSize = new System.Drawing.Size(1278, 65);
+            this.form.MinimumSize = new System.Drawing.Size(1278, 635);
 
             //PnlGenerareTraseu
-            this.Size = new System.Drawing.Size(1278, 584);
+            this.Size = new System.Drawing.Size(1278, 635);
             this.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 13.8F, System.Drawing.FontStyle.Regular);
             this.Name = "PnlGenerareTraseu";
 
             this.btnBack = new Button();
             this.pctHarta = new PictureBox();
+            this.lblTitlu = new Label();
+            this.pictureBox = new PictureBox();
 
             this.Controls.Add(this.btnBack);
             this.Controls.Add(pctHarta);
+            this.Controls.Add(lblTitlu);
+            this.Controls.Add(pictureBox);
 
-            // btnStart
+            pictureBox.Size = new Size(1278,90);
+            this.pictureBox.BackColor = System.Drawing.ColorTranslator.FromHtml("#5F7ADB");
+
+            this.lblTitlu.Text = "Generare Traseu";
+            this.lblTitlu.Location = new Point(500, 20);
+            this.lblTitlu.BackColor = System.Drawing.ColorTranslator.FromHtml("#5F7ADB");
+            this.lblTitlu.ForeColor = Color.White;
+            this.lblTitlu.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 25.8F);
+            this.lblTitlu.AutoSize = true;
+
+            // btnBack
             this.btnBack.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 14.8F);
-            this.btnBack.Location = new System.Drawing.Point(1028, 102);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnBack.Location = new System.Drawing.Point(1020, 500);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(153, 60);
             this.btnBack.Text = "Back";
             this.btnBack.Click += new EventHandler(btnBack_Click);
+            this.btnBack.BackColor = System.Drawing.ColorTranslator.FromHtml("#5F7ADB");
+            this.btnBack.ForeColor = Color.White;
 
             // pctHarta
             this.pctHarta.BackColor = System.Drawing.Color.LightBlue;
-            this.pctHarta.Location = new System.Drawing.Point(39, 12);
+            this.pctHarta.Location = new System.Drawing.Point(39, 100);
             this.pctHarta.Name = "pctHarta";
             this.pctHarta.Size = new System.Drawing.Size(851, 560);
             this.pctHarta.Paint += new PaintEventHandler(pctHarta_Paint);

@@ -21,6 +21,7 @@ namespace Centenarului_Marii_Uniri.Panels
         Button btnBack;
         LinkLabel linkParola;
         Form1 form;
+        PictureBox pictureBox;
 
         ControllerUtilizatori controllerUtilizatori;
 
@@ -50,6 +51,7 @@ namespace Centenarului_Marii_Uniri.Panels
             this.lblParola = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.linkParola = new System.Windows.Forms.LinkLabel();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
              
             this.Controls.Add(this.linkParola);
             this.Controls.Add(this.btnBack);
@@ -59,16 +61,23 @@ namespace Centenarului_Marii_Uniri.Panels
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lblTitlu);
+            this.Controls.Add(this.pictureBox);
+
+            //picturebox
+            this.pictureBox.Size = new System.Drawing.Size(535,135);
+            this.pictureBox.BackColor = System.Drawing.ColorTranslator.FromHtml("#5F7ADB");
 
 
             // lblTitlu
             this.lblTitlu.AutoSize = true;
-            this.lblTitlu.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 25.8F);
-            this.lblTitlu.Location = new System.Drawing.Point(159, 43);
+            this.lblTitlu.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 39.8F);
+            this.lblTitlu.ForeColor = System.Drawing.Color.White;
+            this.lblTitlu.Location = new System.Drawing.Point(160, 35);
             this.lblTitlu.Name = "lblTitlu";
             this.lblTitlu.Size = new System.Drawing.Size(133, 57);
             this.lblTitlu.Text = "Login";
-             
+            this.lblTitlu.BackColor = System.Drawing.ColorTranslator.FromHtml("#5F7ADB");
+
             // btnLogin
             this.btnLogin.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 17.8F);
             this.btnLogin.Location = new System.Drawing.Point(55, 458);
@@ -76,6 +85,8 @@ namespace Centenarului_Marii_Uniri.Panels
             this.btnLogin.Size = new System.Drawing.Size(155, 55);
             this.btnLogin.Text = "Login";
             this.btnLogin.Click += new EventHandler(btnLogin_Click);
+            this.btnLogin.BackColor = System.Drawing.ColorTranslator.FromHtml("#5F7ADB");
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
 
             // lblEmail
             this.lblEmail.AutoSize = true;
@@ -110,7 +121,9 @@ namespace Centenarului_Marii_Uniri.Panels
             this.btnBack.Size = new System.Drawing.Size(155, 55);
             this.btnBack.Text = "Back";
             this.btnBack.Click += new EventHandler(btnBack_Click);
-             
+            this.btnBack.BackColor = System.Drawing.ColorTranslator.FromHtml("#5F7ADB");
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+
             // linkParola
             this.linkParola.AutoSize = true;
             this.linkParola.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 11.8F);
