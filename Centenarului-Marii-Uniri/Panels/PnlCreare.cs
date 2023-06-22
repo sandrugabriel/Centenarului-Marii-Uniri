@@ -208,6 +208,8 @@ namespace Centenarului_Marii_Uniri.Panels
             this.btnSalvare.Size = new System.Drawing.Size(238, 70);
             this.btnSalvare.Text = "Salvare lectie";
             this.btnSalvare.Click += new EventHandler(btnSalvare_Click);
+            this.btnSalvare.BackColor = System.Drawing.ColorTranslator.FromHtml("#5F7ADB");
+            this.btnSalvare.ForeColor = Color.White;
 
             // btnBack
             this.btnBack.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 17.8F);
@@ -215,6 +217,8 @@ namespace Centenarului_Marii_Uniri.Panels
             this.btnBack.Size = new System.Drawing.Size(238, 70);
             this.btnBack.Text = "Back";
             this.btnBack.Click += new EventHandler(btnBack_Click);
+            this.btnBack.BackColor = System.Drawing.ColorTranslator.FromHtml("#5F7ADB");
+            this.btnBack.ForeColor = Color.White;
 
             // tableLayoutPanel
             this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
@@ -224,7 +228,7 @@ namespace Centenarului_Marii_Uniri.Panels
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel.Size = new System.Drawing.Size(910, 597);
-            this.tableLayoutPanel.BackColor = Color.Gray;
+            this.tableLayoutPanel.BackColor = SystemColors.Info;
 
         }
 

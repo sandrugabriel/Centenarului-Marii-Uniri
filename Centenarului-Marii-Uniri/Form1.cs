@@ -18,7 +18,7 @@ namespace Centenarului_Marii_Uniri
         {
             InitializeComponent();
             Utilizator utilizator = new Utilizator("1*Popescu Ion*1234*popescu@gmail.com");
-            this.Controls.Add(new PnlGhiceste(this,utilizator));
+            this.Controls.Add(new PnlCentenarul_Marii_Uniri(this));
 
         }
 

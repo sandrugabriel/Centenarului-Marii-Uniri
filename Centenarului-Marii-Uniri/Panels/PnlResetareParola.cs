@@ -31,6 +31,7 @@ namespace Centenarului_Marii_Uniri.Panels
         Label lblparola2;
         Button btnSalvare;
         Label label;
+        PictureBox pictureBox1;
 
         Form1 form;
 
@@ -82,6 +83,7 @@ namespace Centenarului_Marii_Uniri.Panels
             this.lblparola2 = new System.Windows.Forms.Label();
             this.btnSalvare = new System.Windows.Forms.Button();
             this.label = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
 
             this.Controls.Add(this.groupBox);
             this.Controls.Add(this.pct2);
@@ -95,8 +97,13 @@ namespace Centenarului_Marii_Uniri.Panels
             this.Controls.Add(this.btnVerificare);
             this.Controls.Add(this.lblTitlu);
             this.Controls.Add(this.label);
+            this.Controls.Add(this.pictureBox1);
 
             label.Location = new System.Drawing.Point(1, 800);
+
+            pictureBox1.Size = new Size(865,65);
+            this.pictureBox1.BackColor = System.Drawing.ColorTranslator.FromHtml("#5F7ADB");
+
 
             // lblTitlu
             this.lblTitlu.AutoSize = true;
@@ -106,6 +113,8 @@ namespace Centenarului_Marii_Uniri.Panels
             this.lblTitlu.Name = "lblTitlu";
             this.lblTitlu.Size = new System.Drawing.Size(509, 39);
             this.lblTitlu.Text = "Am uitat parola la adresa de email : " + email;
+            this.lblTitlu.BackColor = System.Drawing.ColorTranslator.FromHtml("#5F7ADB");
+            this.lblTitlu.ForeColor = Color.White;
 
             // btnVerificare
             this.btnVerificare.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 17.8F);
@@ -115,6 +124,8 @@ namespace Centenarului_Marii_Uniri.Panels
             this.btnVerificare.Size = new System.Drawing.Size(175, 55);
             this.btnVerificare.Text = "Verificare";
             this.btnVerificare.Click += new EventHandler(btnVerificare_Click);
+            this.btnVerificare.BackColor = System.Drawing.ColorTranslator.FromHtml("#5F7ADB");
+            this.btnVerificare.ForeColor = Color.White;
 
             // lblSubTitlu
             this.lblSubTitlu.AutoSize = true;
@@ -148,6 +159,8 @@ namespace Centenarului_Marii_Uniri.Panels
             this.btnBack.Size = new System.Drawing.Size(175, 55);
             this.btnBack.Text = "Back";
             this.btnBack.Click += new EventHandler(btnBack_Click);
+            this.btnBack.BackColor = System.Drawing.ColorTranslator.FromHtml("#5F7ADB");
+            this.btnBack.ForeColor = Color.White;
 
             // pct1
             this.pct1.Location = new System.Drawing.Point(106, 115);
@@ -312,6 +325,10 @@ namespace Centenarului_Marii_Uniri.Panels
 
                 groupBox.Enabled = true;
                 btnVerificare.Enabled = false;
+                this.btnSalvare.BackColor = System.Drawing.ColorTranslator.FromHtml("#5F7ADB");
+                this.btnSalvare.ForeColor = Color.White;
+                this.btnVerificare.BackColor = Color.White;
+                this.btnVerificare.ForeColor = Color.Gray;
 
             }
 
