@@ -114,6 +114,7 @@ namespace Centenarului_Marii_Uniri.Panels
             conturHarta(g);
 
             regiuni(g);
+            MessageBox.Show("asd");
 
         }
 
